@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package tutorial;
+ 
+message Person {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+
+
+
+
+//注册
+message PcbtRegister
+{
+	string examTimeIdString = 1;
+}
+
+
+//考生端结束考试
+message PcbtEndExam 
+{
+	uint32 orderNum = 1;
+	string userIdString = 2;
+}
+
+message COntrolMsg
+{
+	string type = 1;
+	string data = 2;
+}
+
+message ControlMsg
+{
+	string type = 1;
+	PcbtEndExam endExam = 2;
+}
